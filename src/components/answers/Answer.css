@@ -1,0 +1,49 @@
+/* basic styling for list items */
+
+.Answers {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+/* styling for possible answers */
+
+.Answers li {
+    padding: 10px;
+    border-left: 4px solid black;
+    background-color: #bbb;
+    margin: 0 0 5px;
+}
+/* when hovered, possible answers show in grey */
+
+.Answers li:hover {
+    cursor: pointer;
+    background-color: #a2a2a2;
+}
+/* when clicked, correct answers show in green */
+
+.Answers .correct,
+.Answers .correct:hover {
+    background-color:green;
+    border-left: 4px solid darkgreen;
+    color: white;
+}
+
+/* when clicked, incorrect answers show in red */
+.Answers .incorrect, 
+.Answers .incorrect:hover {
+    background-color: red;
+    border-left: 4px solid darkred;
+    color: white;
+}
+
+/* li items that were not selected as disabled as they cannot be clicked, opacity assigned to indicate this */
+.Answers[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.AnswerMessage {
+    text-align: center;
+    padding-top: 10px;
+}
